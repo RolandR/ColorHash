@@ -1,0 +1,71 @@
+<!doctype html>
+<html>
+	<head>
+		<title>
+			ColorHash
+		</title>
+		<style>
+			*{
+				margin: 0px;
+				padding: 0px;
+			}
+			
+			body{
+				text-align: center;
+				font-size: 2em;
+				font-family: sans-serif;
+				background-color: #333333;
+				padding-top: 100px;
+			}
+
+			h1, p{
+				font-weight: lighter;
+				color: #FFFFFF;
+				text-shadow: 2px 2px #222222;
+			}
+
+			p{
+				margin-top: 30px;
+			}
+
+			input{
+				height: 30px;
+				width: 300px;
+				font-size: 20px;
+				padding: 5px;
+				margin-top: 30px;
+			}
+		</style>
+	</head>
+	<body>
+		<h1>Color Hash</h1>
+		<input id="stringToHash" type="text" placeholder="Enter any string" />
+		<p id="colorValue"></p>
+	</body>
+	<script type="text/javascript" src="./colorhash.js"></script>
+	<script type="text/javascript">
+		document.getElementById("stringToHash").oninput = function(event){
+			var inputString = event.target.value;
+			if(inputString && inputString.length > 0){
+				inputString = inputString.split("");
+				var r = 0;
+				var g = 0;
+				var b = 0;
+				
+				for(var i in inputString){
+					r += (Math.pow(inputString[i].charCodeAt(0), 2));
+					g += (Math.sqrt(inputString[i].charCodeAt(0)) * 2142);
+					b += (Math.sin(inputString[i].charCodeAt(0)) * 1337);
+				}
+				r = Math.abs(~~(r % 255));
+				g = Math.abs(~~(g % 255));
+				b = Math.abs(~~(b % 255));
+
+				var color = "rgb("+r+", "+g+", "+b+")";
+
+				document.body.style.backgroundColor = color;
+				document.getElementById("colorValue").innerHTML = color;
+			}
+		}
+	</script>
+</html>
