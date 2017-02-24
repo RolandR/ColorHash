@@ -1,25 +1,21 @@
 function colorHash(inputString){
-	inputString = inputString.split("");
-	var r = 0;
-	var g = 0;
-	var b = 0;
+	var sum = 0;
 	
 	for(var i in inputString){
-		r += (Math.pow(inputString[i].charCodeAt(0), 2));
-		g += (Math.sqrt(inputString[i].charCodeAt(0)) * 2142);
-		b += (Math.sin(inputString[i].charCodeAt(0)) * 1337);
+		sum += inputString.charCodeAt(i);
 	}
-	r = Math.abs(~~(r % 255));
-	g = Math.abs(~~(g % 255));
-	b = Math.abs(~~(b % 255));
+
+	r = ~~(('0.'+Math.sin(sum+1).toString().substr(6))*256);
+	g = ~~(('0.'+Math.sin(sum+2).toString().substr(6))*256);
+	b = ~~(('0.'+Math.sin(sum+3).toString().substr(6))*256);
 
 	var rgb = "rgb("+r+", "+g+", "+b+")";
 
 	var hex = "#";
 
 	hex += ("00" + r.toString(16)).substr(-2,2).toUpperCase();
-	hex += ("00" + g.toString(16)).substr(-2,2).toUpperCase();
-	hex += ("00" + b.toString(16)).substr(-2,2).toUpperCase();
+	hex += ("00" + g.toString(18)).substr(-2,2).toUpperCase();
+	hex += ("00" + b.toString(20)).substr(-2,2).toUpperCase();
 
 	return {
 		 r: r
