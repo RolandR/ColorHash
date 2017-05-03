@@ -50,114 +50,32 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<meta name="mobile-web-app-capable" content="yes">
 		
-		<style>
-			*{
-				margin: 0px;
-				padding: 0px;
-			}
-			
-			body{
-				text-align: center;
-				font-size: 2em;
-				font-family: sans-serif;
-				background-color: #333333;
-				padding-top: 100px;
-				text-shadow: 1px 1px #222222;
-			}
-
-			h1{
-				text-shadow: 2px 2px #222222;
-			}
-
-			h1, h2, p{
-				font-weight: lighter;
-				color: #FFFFFF;
-			}
-
-			h2{
-				font-size: 0.7em;
-			}
-			
-			a, a:visited{
-				color: #FFFFFF;
-			}
-
-			a:hover{
-				color: #FFAA00;	
-			}
-
-			#rgb, #hex{
-				margin-top: 0px;
-				font-size: 0.8em;
-				text-shadow: 1px 1px #222222;
-				display: block;
-				height: 40px;
-			}
-
-			p{
-				font-size: 0.8em;
-			}
-
-			input{
-				height: 30px;
-				width: 300px;
-				font-size: 20px;
-				padding: 5px;
-				margin-top: 20px;
-				margin-bottom: 20px;
-			}
-
-			#description{
-				margin-top: 20px;
-				max-width: 700px;
-				display: inline-block;
-				text-align: justify;
-				background-color: rgba(40, 40, 40, 0.5);
-				padding: 10px 20px;
-				font-size: 21px;
-				font-weight: lighter;
-				border: 1px #000000 solid;
-			}
-
-			#license{
-				margin-top: 15px;
-				display: flex;
-				align-items: center;
-				justify-content: center;
-			}
-
-			#publicDomainImg{
-				margin-right: 15px;
-			}
-
-			#footer{
-				position: absolute;
-				bottom: 30px;
-				right: 30px;
-				font-size: 0.8em;
-			}
-		</style>
+		<link href="./style.css" rel="stylesheet" type="text/css" media="all">
 	</head>
 
 
 	
 	<body>
-		<h1>Color Hash</h1>
-		<input id="stringToHash" type="text" placeholder="Enter any string" autofocus />
-		<p id="rgb"></p>
-		<p id="hex"></p>
-		<div id="description">
-			<p>This will generate a pseudo-random color based on an input string.<br>
-			For any given string, the generated color will always be the same, like a hash function.</p>
-			<div id="license">
-				<a href="https://en.wikipedia.org/wiki/Public-domain_software">
-					<img src="public-domain.svg" alt="Public Domain" id="publicDomainImg">
-				</a>
-				<p>Color Hash is <a href="https://en.wikipedia.org/wiki/Public-domain_software">public domain software</a>.<br>
-				You can use, copy, adapt and republish it for any purpose whatsoever.</p>
+		<article>
+			<h1>Color Hash</h1>
+			<input id="stringToHash" type="text" placeholder="Enter any string" autofocus />
+			<p id="rgb"></p>
+			<p id="hex"></p>
+			<div id="description">
+				<p>This will generate a pseudo-random color based on an input string.<br>
+				For any given string, the generated color will always be the same, like a hash function.</p>
+				<div id="license">
+					<a href="https://en.wikipedia.org/wiki/Public-domain_software">
+						<img src="public-domain.svg" alt="Public Domain" id="publicDomainImg">
+					</a>
+					<p>Color Hash is <a href="https://en.wikipedia.org/wiki/Public-domain_software">public domain software</a>.<br>
+					You can use, copy, adapt and republish it for any purpose whatsoever.</p>
+				</div>
 			</div>
-		</div>
-		<p id="footer">by <a rel="author" href="http://draemm.li">Roland Rytz</a> - <a href="https://github.com/RolandR/ColorHash">Source</a></p>
+		</article>
+		<footer>
+			<p id="footer">by <a rel="author" href="http://draemm.li">Roland Rytz</a> - <a href="https://github.com/RolandR/ColorHash">Source</a></p>
+		</footer>
 	</body>
 
 
