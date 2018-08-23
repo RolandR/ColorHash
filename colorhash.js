@@ -50,8 +50,8 @@ function colorHash(inputString){
 	var hex = "#";
 
 	hex += ("00" + r.toString(16)).substr(-2,2).toUpperCase();
-	hex += ("00" + g.toString(18)).substr(-2,2).toUpperCase();
-	hex += ("00" + b.toString(20)).substr(-2,2).toUpperCase();
+	hex += ("00" + g.toString(16)).substr(-2,2).toUpperCase();
+	hex += ("00" + b.toString(16)).substr(-2,2).toUpperCase();
 
 	return {
 		 r: r
